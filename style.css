@@ -1,0 +1,106 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #74ebd5, #acb6e5);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 550px;
+    margin: 60px auto;
+    padding: 30px 25px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+#todo-form {
+    margin-bottom: 20px;
+}
+
+#todo-title {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border 0.3s;
+}
+
+#todo-title:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.buttons button {
+    flex: 1 1 45%;
+    padding: 12px 18px;
+    font-size: 16px;
+    background: linear-gradient(135deg, #4CAF50, #388e3c);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.buttons button:hover {
+    background-color: #2e7d32;
+    transform: translateY(-2px);
+}
+
+#todo-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#todo-list li {
+    background-color: #f9f9f9;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-left: 5px solid #4CAF50;
+    border-radius: 8px;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+#todo-list li:hover {
+    background-color: #eef6f3;
+}
+
+/* Message box styling */
+#message-box {
+    display: none;
+    margin-top: 15px;
+    padding: 14px 18px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 15px;
+    text-align: center;
+    animation: fadeIn 0.4s ease-in-out;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive for mobile */
+@media (max-width: 600px) {
+    .buttons button {
+        flex: 1 1 100%;
+    }
+}
